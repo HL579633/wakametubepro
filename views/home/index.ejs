@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <script src="/js/tailwindcss.js"></script>
+    <script>
+  const password = "wakame";
+  const input = prompt("パスワードを入力してください：");
+  if (input !== password) {
+    document.body.innerHTML = "<h1>403 Forbidden</h1>";
+  }
+</script>
+
     <link rel="stylesheet" href="/css/page.css">
     <style>
         .hero-section {
