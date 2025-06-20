@@ -20,6 +20,23 @@
     }
   </style>
 </head>
+<script>
+    function checkPassword() {
+      const correctPassword = "wakame"; // ← ここで任意のパスワードに変更できます
+      const userInput = prompt("パスワードを入力してください:");
+      
+      if (userInput === correctPassword) {
+        document.getElementById("content").style.display = "block";
+      } else {
+        alert("パスワードが間違っています。");
+      }
+    }
+    
+    window.onload = function() {
+      document.getElementById("content").style.display = "none";
+      checkPassword();
+    };
+  </script>
 <body>
   <h1>埋め込みサイトビューア</h1>
   <div>
