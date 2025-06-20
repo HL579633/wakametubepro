@@ -2,17 +2,39 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>proxy</title>
+  <title>埋め込みサイトボタン</title>
   <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+    }
     iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
+      width: 80%;
+      height: 500px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>prokisisis</h1>
-  <iframe src="https://www.911proxy.com/croxyproxy/"></iframe>
+  <h1>埋め込みサイトビューア</h1>
+  <div>
+    <button onclick="loadSite('https://example.com')">サイト1</button>
+    <button onclick="loadSite('https://example.org')">サイト2</button>
+    <button onclick="loadSite('https://example.net')">サイト3</button>
+    <button onclick="loadSite('https://example.edu')">サイト4</button>
+    <button onclick="loadSite('https://example.co.jp')">サイト5</button>
+  </div>
+  <iframe id="viewer" src=""></iframe>
+
+  <script>
+    function loadSite(url) {
+      document.getElementById('viewer').src = url;
+    }
+  </script>
 </body>
 </html>
